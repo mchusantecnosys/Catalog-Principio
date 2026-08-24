@@ -1,0 +1,6 @@
+{
+  "name": "Principio - Catálogo Digital Interactivo",
+  "description": "Catálogo editorial interactivo de piezas exclusivas en resina epóxica para Principio (@Principio.ec), con visor de revista móvil 9:16, simulador en vivo y pedidos directos por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
