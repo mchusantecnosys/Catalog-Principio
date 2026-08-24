@@ -31,11 +31,11 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
   if (!isOpen) return null;
 
   const productConfigs = {
-    keychain: { name: "Llavero Monograma 'Kelly'", basePrice: 5.0, hasLetter: true, hasDate: false },
-    pen: { name: 'Bolígrafo Elegance Custom', basePrice: 6.0, hasLetter: false, hasDate: false },
-    agenda: { name: 'Agenda A7 Crystal Cover', basePrice: 13.0, hasLetter: false, hasDate: false },
-    duo: { name: "Llaveros Dúo 'Connection' (Corazones)", basePrice: 7.0, hasLetter: false, hasDate: true },
-    box: { name: 'Box Regalo Executive Deluxe', basePrice: 28.0, hasLetter: true, hasDate: false },
+    keychain: { name: "Llavero Monograma 'Kelly'", hasLetter: true, hasDate: false },
+    pen: { name: 'Bolígrafo Elegance Custom', hasLetter: false, hasDate: false },
+    agenda: { name: 'Agenda A7 Crystal Cover', hasLetter: false, hasDate: false },
+    duo: { name: "Llaveros Dúo 'Connection' (Corazones)", hasLetter: false, hasDate: true },
+    box: { name: 'Box Regalo Executive Deluxe', hasLetter: true, hasDate: false },
   };
 
   const currentConfig = productConfigs[state.productType];
@@ -69,8 +69,7 @@ ${currentConfig.hasLetter ? `• Inicial: Letra "${state.initialLetter}"\n` : ''
 ${currentConfig.hasDate && state.specialDate ? `• Fecha especial: ${state.specialDate}\n` : ''}• Pigmento base: ${selectedPigment.name}
 • Encapsulados: ${getEncapsulatedNames() || 'Ninguno'}
 • Herraje: ${state.hardwareColor === 'gold' ? 'Oro Pulido' : state.hardwareColor === 'rosegold' ? 'Oro Rosado' : 'Plata Satinada'}
-• Total estimado: $${currentConfig.basePrice.toFixed(2)} USD
-¿Me podrían confirmar disponibilidad y tiempo de entrega?`;
+¿Me podrían confirmar disponibilidad, cotización y tiempo de entrega?`;
 
   return (
     <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
@@ -117,16 +116,13 @@ ${currentConfig.hasDate && state.specialDate ? `• Fecha especial: ${state.spec
                   <button
                     key={key}
                     onClick={() => setState({ ...state, productType: key })}
-                    className={`p-2.5 rounded-xs border text-left flex flex-col justify-between transition-all cursor-pointer ${
+                    className={`p-2.5 rounded-xs border text-left flex flex-col justify-center transition-all cursor-pointer min-h-[52px] ${
                       active
                         ? 'bg-[#1F3E35] border-[#1F3E35] text-white shadow-xs'
                         : 'bg-white/80 border-[#C59B7D]/25 text-[#1E2022] hover:bg-[#EAE4DC]'
                     }`}
                   >
                     <span className="text-[11px] font-sans-clean font-medium leading-tight">{conf.name}</span>
-                    <span className={`text-[10px] serif mt-1 font-normal ${active ? 'text-[#C59B7D]' : 'text-[#C59B7D]'}`}>
-                      ${conf.basePrice.toFixed(2)} USD
-                    </span>
                   </button>
                 );
               })}
@@ -232,9 +228,9 @@ ${currentConfig.hasDate && state.specialDate ? `• Fecha especial: ${state.spec
               </ul>
 
               <div className="pt-2 border-t border-[#C59B7D]/25 flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-widest text-[#C59B7D] font-medium">Inversión:</span>
-                <span className="serif text-2xl font-normal text-[#1F3E35]">
-                  ${currentConfig.basePrice.toFixed(2)} USD
+                <span className="text-[10px] uppercase tracking-widest text-[#C59B7D] font-medium">Confección:</span>
+                <span className="text-[11px] font-sans-clean font-medium text-[#1F3E35]">
+                  Pieza de Autor Curada a Mano
                 </span>
               </div>
             </div>
