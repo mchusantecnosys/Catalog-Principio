@@ -2,7 +2,7 @@ import heroCoverImg from '../assets/images/principio_hero_cover_1787584547994.jp
 import pensImg from '../assets/images/principio_pens_elegance_1787584559904.jpg';
 import agendaImg from '../assets/images/principio_agenda_crystal_1787584571324.jpg';
 import keychainImg from '../assets/images/principio_keychain_kelly_1787584582658.jpg';
-import duoImg from '../assets/images/principio_duo_connection_1787584594914.jpg';
+import duoImg from '../assets/images/principio_duo_connection.jpg';
 import boxImg from '../assets/images/principio_box_deluxe_1787584607246.jpg';
 import customLettersImg from '../assets/images/principio_custom_letters_1787584617570.jpg';
 import { CatalogPage } from '../types';
@@ -26,7 +26,7 @@ export const CATALOG_PAGES: CatalogPage[] = [
     tagline: 'El Arte de la Resina y la Luz',
     description: 'Catálogo de piezas exclusivas curadas a mano en Guayaquil, Ecuador. Objetos de autor donde la luz y la materia se unen en piezas eternas.',
     image: heroCoverImg,
-    imageAlt: 'Monograma inicial en resina cristalina con hojilla de oro y botánica fina',
+    imageAlt: 'Llavero inicial S en resina lila con hojas botánicas moradas, hojilla de oro y caligrafía Sharick',
     ctaText: 'Explorar Catálogo',
     bgColor: '#F7F5F0',
     textColor: '#1E2022',
@@ -82,12 +82,12 @@ export const CATALOG_PAGES: CatalogPage[] = [
     price: '$6.00 USD',
     priceNumber: 6,
     image: pensImg,
-    imageAlt: 'Colección de bolígrafos de resina en tonos turquesa, rosa, púrpura y verde esmeralda con hojilla de oro',
+    imageAlt: 'Colección de bolígrafos de resina personalizados con caligrafía y dijes de corazón (Verónica, Crilexis, Yadira, Ornella) sobre arena blanca',
     detailedSpecs: [
       { label: 'Cartucho', value: 'Tinta gel negra reemplazable', icon: 'PenTool' },
-      { label: 'Acabado', value: 'Hojilla de oro / plata / glitter', icon: 'Sparkles' },
+      { label: 'Acabado', value: 'Glitter degradado / hojilla / resina dual', icon: 'Sparkles' },
       { label: 'Personalización', value: 'Nombre en caligrafía vinílica fina', icon: 'Type' },
-      { label: 'Detalle', value: 'Dije de corazón en resina a juego', icon: 'Heart' },
+      { label: 'Detalle', value: 'Dije colgante de corazón a juego', icon: 'Heart' },
     ],
     ctaText: 'Pedir por WhatsApp',
     whatsappMessage: 'Hola Principio, quisiera pedir/consultar el Bolígrafo Elegance Custom.',
@@ -95,7 +95,7 @@ export const CATALOG_PAGES: CatalogPage[] = [
     textColor: '#1E2022',
     accentColor: '#C59B7D',
     highlightTag: 'BEST SELLER ESCRITORIO',
-    customizationNotes: 'Variedad de tonos: Turquesa, Rosa Blush, Púrpura Amatista, Verde Esmeralda.',
+    customizationNotes: 'Variedad de tonos: Azul Cobalto, Oro Rosa, Púrpura Amatista, Verde Esmeralda.',
   },
   {
     id: 5,
@@ -109,7 +109,7 @@ export const CATALOG_PAGES: CatalogPage[] = [
     price: '$13.00 USD',
     priceNumber: 13,
     image: agendaImg,
-    imageAlt: 'Agenda A7 con tapas en resina turquesa y argollas doradas sobre lino marfil',
+    imageAlt: 'Agenda A7 Miss Gladys en resina turquesa y blanco con glitter y 6 argollas doradas sobre bandeja de terciopelo verde esmeralda',
     detailedSpecs: [
       { label: 'Formato', value: 'A7 Ejecutivo (12.3 x 8.5 cm)', icon: 'BookOpen' },
       { label: 'Sistema', value: '6 Argollas doradas recargables', icon: 'Layers' },
@@ -145,26 +145,26 @@ export const CATALOG_PAGES: CatalogPage[] = [
     type: 'product',
     category: 'ACCESORIOS & MONOGRAMAS',
     categoryNumber: '02',
-    title: "Llavero Monograma 'Kelly'",
-    subtitle: 'COLECCIÓN CANDY PASTEL EN RESINA DUAL',
-    description: 'Inicial en resina dual cristalina y base perlada lila/rosa, enriquecida con confeti de fimo pastel de tulipanes, mariposas y nubes. Incluye herraje en oro pulido de alta gama y dije metálico con grabado "Made with Love".',
+    title: "Llavero Monograma 'Miryan Gold'",
+    subtitle: 'COLECCIÓN ATELIER EN RESINA DUAL & HOJILLA DE ORO',
+    description: 'Inicial en resina dual con mitad en blanco marfil satinado y mitad en cristal transparente repleto de hojilla de oro 24k. Incluye herraje en oro pulido de alta gama, dije metálico en forma de corazón con grabado "Made with Love" y caligrafía personalizada.',
     price: '$5.00 USD',
     priceNumber: 5,
     image: keychainImg,
-    imageAlt: "Llavero de inicial K con confeti pastel de tulipanes y mariposas con dije 'Made with Love'",
+    imageAlt: "Llavero de inicial M 'Miryan' en resina blanca marfil y hojilla de oro con dije de corazón 'Made with Love'",
     detailedSpecs: [
-      { label: 'Composición', value: 'Resina dual cristalina + satinada', icon: 'Sparkles' },
-      { label: 'Encapsulado', value: 'Confeti fimo (tulipanes/mariposas/nubes)', icon: 'Smile' },
-      { label: 'Herraje', value: 'Mosquetón oro pulido + dije corazón', icon: 'ShieldCheck' },
-      { label: 'Personalización', value: 'Nombre caligráfico (ej. Kelly ♡)', icon: 'Heart' },
+      { label: 'Composición', value: 'Resina dual blanca marfil + cristal oro', icon: 'Sparkles' },
+      { label: 'Encapsulado', value: 'Hojilla de oro 24k brillante de autor', icon: 'Smile' },
+      { label: 'Herraje', value: 'Mosquetón oro pulido + dije corazón grabado', icon: 'ShieldCheck' },
+      { label: 'Personalización', value: 'Nombre caligráfico vinílico (ej. Miryan ♡)', icon: 'Heart' },
     ],
-    ctaText: 'Pedir mi Inicial Pastel por WhatsApp',
-    whatsappMessage: 'Hola Principio, deseo pedir un Llavero Monograma Estilo Kelly Pastel con la inicial...',
+    ctaText: 'Pedir mi Monograma por WhatsApp',
+    whatsappMessage: 'Hola Principio, deseo pedir un Llavero Monograma con hojilla de oro con la inicial...',
     bgColor: '#F7F5F0',
     textColor: '#1E2022',
     accentColor: '#C59B7D',
-    highlightTag: 'EDICIÓN CANDY PASTEL',
-    customizationNotes: 'Disponible en todas las letras (A-Z). Fondo lila perlado, rosa pastel o menta.',
+    highlightTag: 'EDICIÓN ATELIER GOLD',
+    customizationNotes: 'Disponible en todas las letras (A-Z). Combinable con hojilla de oro, plata o glitter.',
   },
   {
     id: 8,
@@ -178,7 +178,7 @@ export const CATALOG_PAGES: CatalogPage[] = [
     price: '$7.00 USD / kit dúo',
     priceNumber: 7,
     image: duoImg,
-    imageAlt: 'Par de llaveros de corazones divididos que encajan, uno en blanco/negro y otro en purpura con glitter',
+    imageAlt: 'Set de llaveros de corazones divididos Jorge & Alex (10/3/2005) en resina blanco/negro salpicado y lila/púrpura glitter con herrajes dorados sobre arena de playa',
     detailedSpecs: [
       { label: 'Set Completo', value: '2 Llaveros de medio corazón que encajan', icon: 'Heart' },
       { label: 'Estilos', value: 'Blanco/Negro Mármol o Púrpura Glitter', icon: 'Palette' },
@@ -205,7 +205,7 @@ export const CATALOG_PAGES: CatalogPage[] = [
     price: '$28.00 USD',
     priceNumber: 28,
     image: boxImg,
-    imageAlt: 'Caja de regalo rígida con viruta protectora conteniendo agenda A7, bolígrafo, marcapáginas y llavero con dedicatoria',
+    imageAlt: 'Box Regalo Executive Deluxe con set personalizado Miss Luz en resina azul océano y hojilla de oro: Agenda A7, Marcapáginas con borla, Bolígrafo y Llavero L',
     detailedSpecs: [
       { label: 'Agenda A7', value: 'Crystal Cover con 6 argollas doradas', icon: 'BookOpen' },
       { label: 'Bolígrafo', value: 'Elegance Custom con dije de corazón', icon: 'PenTool' },
