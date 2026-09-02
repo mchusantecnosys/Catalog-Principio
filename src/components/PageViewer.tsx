@@ -503,8 +503,8 @@ export const PageViewer: React.FC<PageViewerProps> = ({
                     ))}
                   </div>
 
-                  {/* Action CTA to Customizer */}
-                  {onOpenCustomizerWithProduct && (
+                  {/* Action CTA: Customizer when enabled, or direct WhatsApp consultation */}
+                  {onOpenCustomizerWithProduct ? (
                     <button
                       onClick={() => onOpenCustomizerWithProduct('keychain')}
                       className="btn-bottle-green w-full flex items-center justify-center gap-2 py-3 px-4 rounded-sm text-xs font-sans-clean uppercase tracking-[0.2em] font-semibold shadow-md hover:opacity-90 transition-all cursor-pointer border border-white/10"
@@ -512,6 +512,16 @@ export const PageViewer: React.FC<PageViewerProps> = ({
                       <Sparkles className="w-4 h-4 text-[#C59B7D]" />
                       <span>{currentPage.ctaText || 'Abrir Simulador de Personalización'}</span>
                     </button>
+                  ) : (
+                    <a
+                      href={buildWhatsAppUrl(currentPage.whatsappMessage || 'Hola Principio, revisé la guía de personalización y deseo cotizar una pieza a medida.')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-bottle-green w-full flex items-center justify-center gap-2 py-3 px-4 rounded-sm text-xs font-sans-clean uppercase tracking-[0.2em] font-semibold shadow-md hover:opacity-90 transition-all cursor-pointer border border-white/10"
+                    >
+                      <MessageCircle className="w-4 h-4 text-[#C59B7D]" />
+                      <span>{currentPage.ctaText || 'Consultar Personalización por WhatsApp'}</span>
+                    </a>
                   )}
                 </div>
               )}

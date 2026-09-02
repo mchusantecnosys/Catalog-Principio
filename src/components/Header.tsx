@@ -7,7 +7,7 @@ interface HeaderProps {
   viewMode: ViewMode;
   setViewMode: (mode: ViewMode) => void;
   onOpenIndex: () => void;
-  onOpenCustomizer: () => void;
+  onOpenCustomizer?: () => void;
   onOpenCare: () => void;
   onOpenShare: () => void;
   currentPageIndex: number;
@@ -54,17 +54,19 @@ export const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
 
-        {/* Center: Quick Action Pill for Customizer */}
-        <div className="flex items-center gap-2">
-          <button
-            id="header-customizer-btn"
-            onClick={onOpenCustomizer}
-            className="btn-bottle-green flex items-center gap-2 px-4 py-2.5 md:px-5 md:py-2.5 rounded-sm shadow-md hover:opacity-90 transition-all cursor-pointer font-sans-clean text-xs uppercase tracking-[0.2em] font-semibold border border-white/10"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#C59B7D] animate-pulse" />
-            <span>Simulador de Piezas</span>
-          </button>
-        </div>
+        {/* Center: Quick Action Pill for Customizer (if enabled) */}
+        {onOpenCustomizer && (
+          <div className="flex items-center gap-2">
+            <button
+              id="header-customizer-btn"
+              onClick={onOpenCustomizer}
+              className="btn-bottle-green flex items-center gap-2 px-4 py-2.5 md:px-5 md:py-2.5 rounded-sm shadow-md hover:opacity-90 transition-all cursor-pointer font-sans-clean text-xs uppercase tracking-[0.2em] font-semibold border border-white/10"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-[#C59B7D] animate-pulse" />
+              <span>Simulador de Piezas</span>
+            </button>
+          </div>
+        )}
 
         {/* Right: View Modes & Extra Tools */}
         <div className="flex items-center gap-1.5 md:gap-2">

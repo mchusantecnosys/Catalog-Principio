@@ -6,7 +6,7 @@ import { buildWhatsAppUrl } from '../data/catalogData';
 interface GridViewerProps {
   pages: CatalogPage[];
   onSelectPage: (index: number) => void;
-  onOpenCustomizerWithProduct: (productId: 'keychain' | 'pen' | 'agenda' | 'duo' | 'box') => void;
+  onOpenCustomizerWithProduct?: (productId: 'keychain' | 'pen' | 'agenda' | 'duo' | 'box') => void;
 }
 
 export const GridViewer: React.FC<GridViewerProps> = ({
@@ -37,10 +37,10 @@ export const GridViewer: React.FC<GridViewerProps> = ({
           <span className="h-px w-8 bg-[#C59B7D]"></span>
         </div>
         <h2 className="serif text-3xl sm:text-4xl font-light text-[#1E2022]">
-          Catálogo Editorial Completo (11 Páginas)
+          Catálogo Editorial Completo ({pages.length} Páginas)
         </h2>
         <p className="text-xs sm:text-sm font-sans-clean font-light text-[#1E2022]/75 max-w-lg mx-auto">
-          Explora la colección 2026/2027 en formato de alta resolución o personaliza cada pieza en el simulador de autor.
+          Explora la colección 2026/2027 en formato de alta resolución y consulta opciones de personalización artesanal.
         </p>
       </div>
 
@@ -111,7 +111,7 @@ export const GridViewer: React.FC<GridViewerProps> = ({
                 Abrir Página
               </button>
 
-              {page.type === 'product' && (
+              {page.type === 'product' && onOpenCustomizerWithProduct && (
                 <button
                   onClick={() => onOpenCustomizerWithProduct(mapPageToProduct(page.id))}
                   className="p-2 rounded-xs bg-[#1F3E35] text-white hover:opacity-90 transition-opacity cursor-pointer border border-white/10"

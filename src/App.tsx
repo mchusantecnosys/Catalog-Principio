@@ -9,6 +9,9 @@ import { IndexDrawer } from './components/IndexDrawer';
 import { LuxuryCareModal } from './components/LuxuryCareModal';
 import { ShareExportModal } from './components/ShareExportModal';
 
+// Flag de configuración: Deshabilita el simulador de piezas en la interfaz manteniendo todo el código
+export const ENABLE_CUSTOMIZER = false;
+
 export default function App() {
   const [currentPageIndex, setCurrentPageIndex] = useState<number>(0);
   const [viewMode, setViewMode] = useState<ViewMode>('magazine');
@@ -19,6 +22,7 @@ export default function App() {
   const [isShareOpen, setIsShareOpen] = useState<boolean>(false);
 
   const handleOpenCustomizerWithProduct = (productId: 'keychain' | 'pen' | 'agenda' | 'duo' | 'box') => {
+    if (!ENABLE_CUSTOMIZER) return;
     setCustomizerProduct(productId);
     setIsCustomizerOpen(true);
   };
@@ -30,10 +34,14 @@ export default function App() {
         viewMode={viewMode}
         setViewMode={setViewMode}
         onOpenIndex={() => setIsIndexOpen(true)}
-        onOpenCustomizer={() => {
-          setCustomizerProduct('keychain');
-          setIsCustomizerOpen(true);
-        }}
+        onOpenCustomizer={
+          ENABLE_CUSTOMIZER
+            ? () => {
+                setCustomizerProduct('keychain');
+                setIsCustomizerOpen(true);
+              }
+            : undefined
+        }
         onOpenCare={() => setIsCareOpen(true)}
         onOpenShare={() => setIsShareOpen(true)}
         currentPageIndex={currentPageIndex}
@@ -47,7 +55,7 @@ export default function App() {
             pages={CATALOG_PAGES}
             currentPageIndex={currentPageIndex}
             onPageChange={(idx) => setCurrentPageIndex(idx)}
-            onOpenCustomizerWithProduct={handleOpenCustomizerWithProduct}
+            onOpenCustomizerWithProduct={ENABLE_CUSTOMIZER ? handleOpenCustomizerWithProduct : undefined}
             onOpenCare={() => setIsCareOpen(true)}
           />
         ) : (
@@ -57,7 +65,7 @@ export default function App() {
               setCurrentPageIndex(idx);
               setViewMode('magazine');
             }}
-            onOpenCustomizerWithProduct={handleOpenCustomizerWithProduct}
+            onOpenCustomizerWithProduct={ENABLE_CUSTOMIZER ? handleOpenCustomizerWithProduct : undefined}
           />
         )}
       </main>
@@ -74,11 +82,14 @@ export default function App() {
         }}
       />
 
-      <CustomizerModal
-        isOpen={isCustomizerOpen}
-        onClose={() => setIsCustomizerOpen(false)}
-        initialProductType={customizerProduct}
-      />
+      {/* Simulador de Piezas en Resina (Código conservado y desactivado por bandera) */}
+      {ENABLE_CUSTOMIZER && (
+        <CustomizerModal
+          isOpen={isCustomizerOpen}
+          onClose={() => setIsCustomizerOpen(false)}
+          initialProductType={customizerProduct}
+        />
+      )}
 
       <LuxuryCareModal
         isOpen={isCareOpen}
