@@ -18,9 +18,12 @@ export const GridViewer: React.FC<GridViewerProps> = ({
     switch (pageId) {
       case 4: return 'pen';
       case 5: return 'agenda';
-      case 7: return 'keychain';
-      case 8: return 'duo';
-      case 9: return 'box';
+      case 6: return 'pen';
+      case 8: return 'keychain';
+      case 9: return 'duo';
+      case 10: return 'keychain';
+      case 11: return 'agenda';
+      case 12: return 'box';
       default: return 'keychain';
     }
   };

@@ -4,6 +4,7 @@ import agendaImg from '../assets/images/principio_agenda_crystal_1787584571324.j
 import bookmarkImg from '../assets/images/principio_separador_hoja_1788356261603.jpg';
 import keychainImg from '../assets/images/principio_keychain_kelly_1787584582658.jpg';
 import duoImg from '../assets/images/principio_duo_connection.jpg';
+import minnieImg from '../assets/images/principio_keychain_minnie_1788464946824.jpg';
 import floralAgendaKitImg from '../assets/images/principio_kit_agenda_flores_1788356242204.jpg';
 import boxImg from '../assets/images/principio_box_deluxe_1787584607246.jpg';
 import customLettersImg from '../assets/images/principio_custom_letters_1787584617570.jpg';
@@ -21,14 +22,14 @@ export function buildWhatsAppUrl(message: string): string {
 export const CATALOG_PAGES: CatalogPage[] = [
   {
     id: 1,
-    pageNumber: '01 / 13',
+    pageNumber: '01 / 14',
     type: 'cover',
     title: 'Piezas Artesanales en Resina Epóxica',
     subtitle: 'EDICIÓN Y COLECCIÓN 2026 / 2027',
     tagline: 'El Arte de la Resina y la Luz',
     description: 'Catálogo de piezas exclusivas curadas a mano en Guayaquil, Ecuador. Objetos de autor donde la luz y la materia se unen en piezas eternas.',
     image: heroCoverImg,
-    imageAlt: 'Llavero inicial S en resina lila con hojas botánicas moradas, hojilla de oro y caligrafía Sharick',
+    imageAlt: 'Llavero inicial S en resina lila con hojas botánicas moradas, papel oro y caligrafía Sharick',
     ctaText: 'Explorar Catálogo',
     bgColor: '#F7F5F0',
     textColor: '#1E2022',
@@ -37,12 +38,12 @@ export const CATALOG_PAGES: CatalogPage[] = [
   },
   {
     id: 2,
-    pageNumber: '02 / 13',
+    pageNumber: '02 / 14',
     type: 'manifesto',
     title: 'El Arte de la Resina y la Luz',
     subtitle: 'NUESTRO MANIFIESTO & FILOSOFÍA',
     tagline: 'Transformar objetos cotidianos en recuerdos eternos.',
-    description: 'En Principio, no fabricamos objetos ordinarios; encapsulamos momentos y texturas. Cada pieza nace de un proceso artesanal lento y cuidadoso de curado epóxico. Fundimos resina cristalina de alto brillo con destellos de hojilla de oro de 24k, pigmentos perlados y elementos botánicos, creando un legado táctil tan único como la persona que lo posee.',
+    description: 'En Principio, no fabricamos objetos ordinarios; encapsulamos momentos y texturas. Cada pieza nace de un proceso artesanal lento y cuidadoso de curado epóxico. Fundimos resina cristalina de alto brillo con destellos de papel oro, pigmentos perlados y elementos botánicos, creando un legado táctil tan único como la persona que lo posee.',
     image: heroCoverImg,
     imageAlt: 'Detalle artesanal de resina pura y destellos dorados',
     detailedSpecs: [
@@ -59,7 +60,7 @@ export const CATALOG_PAGES: CatalogPage[] = [
   },
   {
     id: 3,
-    pageNumber: '03 / 13',
+    pageNumber: '03 / 14',
     type: 'category',
     category: 'ESCRITORIO & PAPELERÍA',
     categoryNumber: '01',
@@ -74,13 +75,13 @@ export const CATALOG_PAGES: CatalogPage[] = [
   },
   {
     id: 4,
-    pageNumber: '04 / 13',
+    pageNumber: '04 / 14',
     type: 'product',
     category: 'ESCRITORIO & PAPELERÍA',
     categoryNumber: '01',
     title: 'Bolígrafo Elegance Custom',
     subtitle: 'DETALLE Y EXCLUSIVIDAD PARA TU ESCRITORIO',
-    description: 'Cuerpo translúcido curado a mano con aplicaciones en hojilla de oro/plata, glitter de alta definición y dije colgante en resina con forma de corazón. Cuenta con cartucho de tinta reemplazable para una durabilidad infinita.',
+    description: 'Cuerpo translúcido curado a mano con aplicaciones en papel oro o plata, glitter de alta definición y dije colgante en resina con forma de corazón. Cuenta con cartucho de tinta reemplazable para una durabilidad infinita.',
     price: '$6.00 USD',
     priceNumber: 6,
     image: pensImg,
@@ -101,7 +102,7 @@ export const CATALOG_PAGES: CatalogPage[] = [
   },
   {
     id: 5,
-    pageNumber: '05 / 13',
+    pageNumber: '05 / 14',
     type: 'product',
     category: 'ESCRITORIO & PAPELERÍA',
     categoryNumber: '01',
@@ -128,13 +129,13 @@ export const CATALOG_PAGES: CatalogPage[] = [
   },
   {
     id: 6,
-    pageNumber: '06 / 13',
+    pageNumber: '06 / 14',
     type: 'product',
     category: 'ESCRITORIO & PAPELERÍA',
     categoryNumber: '01',
     title: 'Separador de Hoja',
     subtitle: 'DELICADEZA Y LUZ PARA TUS LECTURAS FAVORITAS',
-    description: 'Marcapáginas rectangular en resina cristalina de alto impacto óptico, encapsulado con flores secas botánicas reales, destellos de hojilla de oro de 24k y borla de seda satinada de autor. Incluye personalización de nombre en caligrafía fina.',
+    description: 'Marcapáginas rectangular en resina cristalina de alto impacto óptico, encapsulado con flores secas botánicas reales, destellos de papel oro y borla de seda satinada de autor. Incluye personalización de nombre en caligrafía fina.',
     price: '$6.00 USD',
     priceNumber: 6,
     image: bookmarkImg,
@@ -155,7 +156,7 @@ export const CATALOG_PAGES: CatalogPage[] = [
   },
   {
     id: 7,
-    pageNumber: '07 / 13',
+    pageNumber: '07 / 14',
     type: 'category',
     category: 'ACCESORIOS & MONOGRAMAS',
     categoryNumber: '02',
@@ -170,13 +171,13 @@ export const CATALOG_PAGES: CatalogPage[] = [
   },
   {
     id: 8,
-    pageNumber: '08 / 13',
+    pageNumber: '08 / 14',
     type: 'product',
     category: 'ACCESORIOS & MONOGRAMAS',
     categoryNumber: '02',
     title: "Llavero Monograma 'Miryan Gold'",
     subtitle: 'COLECCIÓN ATELIER EN RESINA DUAL & HOJILLA DE ORO',
-    description: 'Inicial en resina dual con mitad en blanco marfil satinado y mitad en cristal transparente repleto de hojilla de oro 24k. Incluye herraje en oro pulido de alta gama, dije metálico en forma de corazón con grabado "Made with Love" y caligrafía personalizada.',
+    description: 'Inicial en resina dual con mitad en blanco marfil satinado y mitad en cristal transparente repleto de papel oro. Incluye herraje en oro pulido de alta gama, dije metálico en forma de corazón con grabado "Made with Love" y caligrafía personalizada.',
     price: '$6.00 USD',
     priceNumber: 6,
     image: keychainImg,
@@ -197,7 +198,7 @@ export const CATALOG_PAGES: CatalogPage[] = [
   },
   {
     id: 9,
-    pageNumber: '09 / 13',
+    pageNumber: '09 / 14',
     type: 'product',
     category: 'ACCESORIOS & MONOGRAMAS',
     categoryNumber: '02',
@@ -224,7 +225,34 @@ export const CATALOG_PAGES: CatalogPage[] = [
   },
   {
     id: 10,
-    pageNumber: '10 / 13',
+    pageNumber: '10 / 14',
+    type: 'product',
+    category: 'ACCESORIOS & MONOGRAMAS',
+    categoryNumber: '02',
+    title: 'Llavero estilo Minnie Mouse',
+    subtitle: 'SILUETA ICÓNICA EN RESINA GLITTER & BORLA DE GAMUZA',
+    description: 'Llavero artesanal en resina epóxica con la silueta de Minnie Mouse. Encapsulado superior en glitter y destellos holográficos púrpura/violeta, fusionado con base blanco perlado y caligrafía personalizada. Incluye herraje en oro pulido y borla de gamuza a juego.',
+    price: '$8.00 USD',
+    priceNumber: 8,
+    image: minnieImg,
+    imageAlt: 'Llavero silueta Minnie Mouse en resina púrpura con glitter holográfico, base blanco perlado con caligrafía Paola ♡, argolla dorada y borla de gamuza violeta sobre tarjeta Principio',
+    detailedSpecs: [
+      { label: 'Diseño', value: 'Silueta Minnie Mouse con orejitas', icon: 'Smile' },
+      { label: 'Acabado', value: 'Glitter púrpura holográfico + blanco perla', icon: 'Sparkles' },
+      { label: 'Accesorios', value: 'Herraje dorado + borla de gamuza violeta', icon: 'ShieldCheck' },
+      { label: 'Personalización', value: 'Nombre en caligrafía vinílica (ej. Paola ♡)', icon: 'Heart' },
+    ],
+    ctaText: 'Pedir Llavero Minnie por WhatsApp',
+    whatsappMessage: 'Hola Principio, me encantó el Llavero estilo Minnie Mouse ($8.00 USD) del catálogo. ¿Me ayudas con uno personalizado?',
+    bgColor: '#F7F5F0',
+    textColor: '#1E2022',
+    accentColor: '#C59B7D',
+    highlightTag: 'NUEVO LANZAMIENTO',
+    customizationNotes: 'Personalizable con tu nombre o iniciales. Colores de glitter a elección (Púrpura, Rosa, Dorado o Plata).',
+  },
+  {
+    id: 11,
+    pageNumber: '11 / 14',
     type: 'product',
     category: 'SETS & KITS DE REGALO',
     categoryNumber: '03',
@@ -251,8 +279,8 @@ export const CATALOG_PAGES: CatalogPage[] = [
     customizationNotes: 'Colores botánicos a elección: Flores Rosa Sakura, Lavanda Silvestre, Azahares Blancos o Girasol Dorado.',
   },
   {
-    id: 11,
-    pageNumber: '11 / 13',
+    id: 12,
+    pageNumber: '12 / 14',
     type: 'product',
     category: 'SETS & KITS DE REGALO',
     categoryNumber: '03',
@@ -279,8 +307,8 @@ export const CATALOG_PAGES: CatalogPage[] = [
     customizationNotes: 'Elige tu paleta cromática completa (Azul Noche, Turquesa Laguna, Rosa Champagne o Esmeralda).',
   },
   {
-    id: 12,
-    pageNumber: '12 / 13',
+    id: 13,
+    pageNumber: '13 / 14',
     type: 'guide',
     title: 'Guía de Personalización & Proceso',
     subtitle: 'TU PIEZA, TUS REGLAS — CURADA PASO A PASO',
@@ -302,8 +330,8 @@ export const CATALOG_PAGES: CatalogPage[] = [
     highlightTag: 'PROCESO ARTESANAL',
   },
   {
-    id: 13,
-    pageNumber: '13 / 13',
+    id: 14,
+    pageNumber: '14 / 14',
     type: 'backcover',
     title: 'PRINCIPIO',
     subtitle: 'GRACIAS POR ELEGIR EL ARTE HECHO A MANO',
@@ -334,7 +362,7 @@ export const PIGMENT_OPTIONS = [
 ];
 
 export const ENCAPSULATED_OPTIONS = [
-  { id: 'gold_leaf', name: 'Hojilla de Oro 24k', tag: '✨ Brillo Lujoso' },
+  { id: 'gold_leaf', name: 'Papel Oro', tag: '✨ Brillo Lujoso' },
   { id: 'silver_leaf', name: 'Hojilla de Plata Satinada', tag: '❄️ Brillo Frío' },
   { id: 'fimo_pastel', name: 'Confeti Fimo Candy (Tulipanes & Nubes)', tag: '🌸 Estilo Kelly' },
   { id: 'botanical', name: 'Flores Secas Botánicas', tag: '🌿 Orgánico' },
